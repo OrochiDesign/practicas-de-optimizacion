@@ -1,0 +1,477 @@
+@font-face {
+    font-family: 'RationalInteger';
+    src: url(../css/RationalInteger.ttf);
+    font-display: swap;
+}
+:root{
+    --color:#240e03;
+    --color2:#DCC69C;
+    --blanco:#fff;
+    --borde:.1rem solid rgba(220, 198, 156, .3);
+}
+*{
+    font-family: 'RationalInteger';
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+    font-weight: bolder;
+}
+*::selection{
+    background-color: var(--color2);
+    color: var(--color);
+}
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--color2);
+    border-radius: 5rem;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+body{
+    background-color: var(--color);
+}
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: var(--borde);
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--color2);
+    transition: .2s linear;
+    margin-top: 1rem;
+    background-color: var(--color);
+}
+.btn:hover{
+    border-radius: 1rem;
+    background-color: var(--color2);
+    color: var(--color);
+}
+.header{
+    padding-bottom: 0;
+}
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.header .flex .logo{
+    color: var(--color2);
+    font-size: 2.5rem;
+}
+.header .flex .btn{
+    margin-top: 0;
+}
+.header .flex .fa-bars{
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--color2);
+    display: none;
+}
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background-color: var(--color2);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.header .navbar a{
+    font-size: 1.8rem;
+    color: var(--color);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+}
+.header .navbar a:hover{
+    background-color: var(--color);
+    color: var(--color2);
+}
+.home .box img{
+    border-radius: .5rem;
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.home .box .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.home .box .flex h3{
+    font-size: 2.5rem;
+    color: var(--color2);
+}
+/*no me deja selecionar los botones sin el div*/
+div.swiper-button-next,
+div.swiper-button-prev{
+    top: 40%;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    padding: 2.5rem 2.5rem;
+    background-color: rgba(220, 198, 156, 0.63);
+    border-radius: 50%;
+    
+}
+div.swiper-button-next::after,
+div.swiper-button-prev::after{
+    font-size: 2rem;
+    color: var(--color);
+}
+.avalibility form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.avalibility form .flex .box{
+    flex: 1 1 20rem;
+}
+.avalibility form .flex .box p{
+    font-size: 2rem;
+    color: var(--color2);
+}
+.avalibility form .flex .box .input{
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    background-color: var(--borde);
+    color: var(--blanco);
+    border-bottom: var(--borde);
+    margin: 1rem 0;
+}
+.avalibility form .flex .box input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+.avalibility form .flex .box select option{
+    filter: invert(1);
+    color: var(--color);
+    font-size: 2rem;
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+.about .row .image{
+    flex: 1 1 40rem;
+}
+.about .row .image img{
+    aspect-ratio: 1/1;
+    width: 40rem;
+    /* object-fit: cover; */
+    border-radius: .5rem;
+}
+.about .row .content{
+    flex: 1 1 40rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--color2);
+    margin-bottom: 1rem;
+}
+.about .row .content p{
+    line-height: 2;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--color2);
+}
+.about .row.revers{
+    flex-flow: row-reverse;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+.services .box-container .box{
+    padding: 2rem;
+    text-align: center;
+}
+.services .box-container .box img{
+    height: 11rem;
+    margin-bottom: 1.5rem;
+}
+.services .box-container .box h3{
+    font-size: 2.6rem;
+    color: var(--color2);
+    margin: 1rem 0;
+}
+.services .box-container .box p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--color2);
+}
+.reservation form{
+    border: var(--borde);
+    padding: 2rem;
+}
+.reservation form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.reservation form h3{
+    color: var(--color);
+    background-color: var(--color2);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    text-align: center;
+}
+.reservation form .flex .box{
+    flex: 1 1 40rem;
+    
+}
+.reservation form .flex .box p{
+    font-size: 1.8rem;
+    color: var(--color2)
+}
+.reservation form .flex .box .input{
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: var(--borde);
+    background-color: var(--color);
+    color: var(--blanco);
+    font-size: 1.8rem;
+    width: 100%;
+}
+.reservation form .flex .box input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+.reservation form .flex .box select option{
+    font-size: 2rem;
+    color: var(--color2);
+}
+/* PONER ASPECT RATIO */
+.gallery img{
+    aspect-ratio: 1 / 1;
+    height: 40rem;
+    width: 60rem;
+    border-radius: .5rem;
+    object-fit: cover;
+    border: var(--borde);
+    margin-bottom: 4rem;
+}
+.swiper-pagination-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    background-color: var(--color2);
+}
+.contact .row{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+    border: var(--borde);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.contact .row .faq{
+    flex: 1 1 40rem;
+}
+.contact .row form h3{
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    color: var(--color);
+    background-color: var(--color2);
+    font-size: 2.2rem;
+}
+.contact .row form .box{
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: var(--borde);
+    font-size: 1.8rem;
+    color: var(--color2);
+    background: var(--color);
+    width: 100%;
+}
+.contact .row form .box::placeholder{
+    color: rgba(220, 198, 156, .6);
+}
+.contact .row form .box:focus{
+    border-color: var(--color2);
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+.contact .row .faq .title{
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    color: var(--color2);
+    text-align: center;
+}
+.contact .row .faq .box{
+    border-radius: .5rem;
+    border: var(--borde);
+    margin-top: 2rem;
+}
+.contact .row .faq .box h3{
+    background: var(--color2);
+    color: var(--color);
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.contact .row .faq .box p{
+    padding: 1.5rem 2rem;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--color2);
+    display: none;
+}
+.contact .row .faq .box.active p{
+    display: inline-block;
+}
+.reviews{
+    padding-top: 0;
+}
+.reviews .box{
+    text-align: center;
+    padding: 2rem;
+    user-select: none;
+    margin-bottom: 2rem;
+}
+.reviews .box img{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+.reviews .box h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: var(--color2);
+}
+.reviews .box p{
+    line-height: 2;
+    font-size: 1.7rem;
+    color: var(--blanco);
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--color2);
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--blanco);
+}
+.footer .box-container .box:first-child i{
+    margin-right: 1rem;
+    color: var(--blanco);
+}
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+.footer .box-container .box:last-child{
+    text-align: right;
+}
+.footer .box-container .box:last-child i{
+    color: var(--blanco);
+    margin-left: 1rem;
+}
+.footer .credit{
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: .5rem;
+    padding: 1.8rem;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+.footer .credit span{
+    color: #FFA257;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*media*/
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header .flex .fa-bars{
+        display: inline-block;
+    }
+    .header .flex .btn{
+        display: none;
+    }
+    .header .navbar{
+        flex-flow: column;
+        padding: 2rem;
+        display: none;
+    }
+    .header .navbar.active{
+        display: flex;
+    }
+}
+@media (max-width:768px){
+    .home .box img{
+        height: 40vh;
+    }
+    div.swiper-button-next,
+    div.swiper-button-prev{
+        top: 35%;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .header .flex .logo{
+        font-size: 2.2rem;
+    }
+    .home .box img{
+        height: 30rem;
+    }
+    .about .row .image img{
+        width: 100%;
+    }
+}
